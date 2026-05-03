@@ -9,14 +9,12 @@ connectDB();
 
 // CORS fix
 app.use(cors({
-  origin: [
-    "https://team-task-managaer-3diyzopb8-prakashs-projects-4cb06fe2.vercel.app"
-  ],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
+  origin: "https://team-task-managaer.vercel.app",
+  credentials: true,
+  allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-// ← app.options('*', cors()) — yeh line bilkul mat likho
+app.options('*', cors());
 
 app.use(express.json());
 
