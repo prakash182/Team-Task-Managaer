@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
-import { Plus, FolderOpen, Users, CheckCircle, Trash2, X } from 'lucide-react';
+import { Plus, FolderOpen, Users, Trash2, X } from 'lucide-react'; // CheckCircle hatao
 import api from '../api/axios';
 import { useAuth } from '../context/AuthContext';
 import './Projects.css';

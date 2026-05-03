@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
-import { CheckSquare, LayoutDashboard, FolderOpen, LogOut, User } from 'lucide-react';
+import { CheckSquare, LayoutDashboard, FolderOpen, LogOut } from 'lucide-react'; // User hatao
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-hot-toast';
 import './Sidebar.css';
