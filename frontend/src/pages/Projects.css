@@ -1,0 +1,127 @@
+.projects-page {
+  padding: 32px;
+  max-width: 1100px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border-color: var(--border);
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.project-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 0;
+  gap: 8px;
+}
+
+.project-color-bar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  opacity: 0.9;
+}
+
+.project-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.project-name {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 16px;
+  line-height: 1.3;
+}
+
+.project-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  padding: 0 16px;
+  line-height: 1.5;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.project-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  margin-top: auto;
+}
+
+.project-members {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* Project status badges */
+.badge-active    { background: var(--green-dim);  color: var(--green); }
+.badge-completed { background: var(--accent-dim); color: var(--accent); }
+.badge-archived  { background: var(--bg-hover);   color: var(--text-dim); }
+
+/* Icon button */
+.icon-btn {
+  background: transparent;
+  padding: 5px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  color: var(--text-dim);
+}
+.icon-btn:hover { background: var(--bg-hover); color: var(--text); }
+.icon-btn.danger:hover { background: var(--red-dim); color: var(--red); }
+
+/* Color picker inside Create Project modal */
+.color-picker {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.color-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: transform 0.15s;
+}
+.color-dot:hover    { transform: scale(1.15); }
+.color-dot.selected { border-color: var(--text); }
+
+/* Modal action buttons row */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 24px;
+}
