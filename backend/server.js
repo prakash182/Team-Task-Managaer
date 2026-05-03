@@ -8,14 +8,14 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
-// Middleware
+// CORS — sab allow karo
 app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://team-task-managaer.vercel.app'
-  ],
-  credentials: true
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+app.options('*', cors()); // preflight
+
 app.use(express.json());
 
 // Routes
